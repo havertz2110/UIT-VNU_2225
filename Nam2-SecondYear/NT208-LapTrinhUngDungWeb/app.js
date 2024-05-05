@@ -7,10 +7,10 @@ const express = require("express"),
 const User = require("./model/user");
 let app = express();
  
-
+app.use(express.static(__dirname + '/public'));
 
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/admin');
+mongoose.connect('mongodb+srv://22520039:JaVHhoJmN7iHt9Sr@scopify.9dlayjt.mongodb.net/users');
 
 var db=mongoose.connection;
 db.on('error', console.log.bind(console, "connection error"));
@@ -54,23 +54,19 @@ app.get("/login", function (req, res) {
     res.render("login");
 });
 
-// Assuming you have a route to render the page
-app.get('/profile', (req, res) => {
-  res.render('profile', { username: req.user.username });
-});
 
 //Handling user login
 app.post("/login", async function(req, res){
     try {
         // check if the user exists
         const detailsCollection = db.collection('details');
-        const user = await detailsCollection.findOne({ username: req.body.username });
-       
+        const user = await detailsCollection.findOne({ name: req.body.name });
         if (user) {
           //check if password matches
           const result = req.body.password === user.password;
           if (result) {
-            res.render("theme");
+            res.render("main");
+
           } else {
             res.status(400).json({ error: "password doesn't match" });
           }
@@ -112,11 +108,6 @@ db.collection('details').insertOne(data,function(err, collection){
 	});
 	return  res.render("register_success");
 })
-
-
-
-
-
 
 
 
