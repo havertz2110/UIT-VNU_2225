@@ -48,6 +48,7 @@
 
         .input-container input {
             padding: 10px;
+            margin: 5px;
             border: 1px solid #ccc;
             border-radius: 3px;
             width: 100%;
@@ -109,9 +110,15 @@
             background-color: white;
         }
 
+        .login {
+            margin-top: 20px;
+            font-size: 16px;
+            color: #888;
+        }
+
         .small-text {
             font-size: 12px;
-            color: #aaa;
+            color: grey;
             margin-top: 20px;
         }
     </style>
@@ -120,7 +127,7 @@
     <div class="container">
         <h1 class="logo">Scopyfy</h1>
         <h2 class="title">Sign up to start listening</h2>
-        <form action="http://localhost:3000/register" method="post">                 
+        <form class="input-container" action="http://localhost:3000/register" method="post">                 
                              
             <input class="box" type="text" name="name" id="name"
             placeholder="Name"  required /><br>
@@ -134,12 +141,13 @@
             <input class="box" type="password" name="password"
             id="password" placeholder="Password " required/><br>
                              
+            <br>
 
-                        <br>
             <input type="submit" id="submitDetails" 
             name="submitDetails" value="Submit" /><br>
                      
-            </form>
+        </form>
+        <div class="login">Already have an account? <a href="/login">Log in here</a></div>
         <p class="small-text">By clicking "Submit", you agree to Spotify's <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a>.</p>
     </div>
 </body>
