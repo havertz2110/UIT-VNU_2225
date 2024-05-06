@@ -4,7 +4,7 @@
   <head>
     <title>Scopify</title>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/stylesfortheme.css" />
   </head>
   <body>
@@ -180,21 +180,14 @@
             <h3>Songs that u might want to hear</h3>
             <span>SEE ALL</span>
           </div>
-          <div class="App__section-grid-container">
-            <div class="App__section-grid-item">
-              <div class="featured-image"></div>
-              <h3>TED Talk</h3>
-              <span>Tâm Anh</span>
-            </div>
+       
             <div class="App__section-grid-item">
               <div class="featured-image"></div>
               <h3>Indie</h3>
               <span>Ngọt, CHH, Chillies</span>
             </div>
-            <div class="App__section-grid-item">
-              <div class="featured-image"></div>
-              <h3>Post Reports</h3>
-              <span>The Washington Post</span>
+      
+        span>The Washington Post</span>
             </div>
             <div class="App__section-grid-item">
               <div class="featured-image"></div>
@@ -206,32 +199,6 @@
               <h3>How I Built this...</h3>
               <span>NPR</span>
             </div>
-            <div class="App__section-grid-item">
-              <div class="featured-image"></div>
-              <h3>TED Radio Hour</h3>
-              <span>NPR</span>
-            </div>
-            <div class="App__section-grid-item">
-              <div class="featured-image"></div>
-              <h3>Short Wave</h3>
-              <span>NPR</span>
-            </div>
-            <div class="App__section-grid-item">
-              <div class="featured-image"></div>
-              <h3>Post Reports</h3>
-              <span>The Washington Post</span>
-            </div>
-            <div class="App__section-grid-item">
-              <div class="featured-image"></div>
-              <h3>Planet Money</h3>
-              <span>NPR</span>
-            </div>
-            <div class="App__section-grid-item">
-              <div class="featured-image"></div>
-              <h3>How I Built this...</h3>
-              <span>NPR</span>
-            </div>
-          </div>
         </section>
         <button id="fetchTopTracksBtn">Fetch Top Tracks</button>
       </div>
@@ -239,7 +206,7 @@
 <script>
 document.addEventListener("DOMContentLoaded", function() {
     const pauseButton = document.getElementById('pauseBtn');
-    const audioPlayer = new Audio('NightChanges.mp3');
+    const audioPlayer = new Audio('songs/Attention- Charlie Puth.mp3');
     const currentTimeDisplay = document.getElementById('currentTime');
     const totalDurationDisplay = document.getElementById('totalDuration');
     const progressBar = document.getElementById('progressBar');
